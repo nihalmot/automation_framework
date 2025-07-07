@@ -1,0 +1,39 @@
+# === Java build files ===
+*.class
+
+# === Maven build directory ===
+/target/
+
+# === TestNG output ===
+/test-output/
+
+# === Logs ===
+/logs/
+/*.log
+
+# === Screenshots and Reports (optional to ignore) ===
+/screenshots/
+/reports/
+
+# === IntelliJ IDEA specific ===
+.idea/
+/*.iml
+
+# === Eclipse specific ===
+.project
+.classpath
+.settings/
+
+# === OS-generated files ===
+.DS_Store
+Thumbs.db
+
+# === Others ===
+*.swp
+*~
+
+# === VS Code specific ===
+.vscode/
+
+# === Dependency caches (optional, safe to regenerate) ===
+/.mvn/
