@@ -1,32 +1,35 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class LoginPage extends BasePage {
+public class DesktopsPage extends BasePage {
 
-	// constructor for LoginPage
+	// constructors for DesktopsPage
 
-	public LoginPage(WebDriver driver) {
+	public DesktopsPage(WebDriver driver) {
 		super(driver);
-		if(!isPageLoaded())
-		{
-			throw new IllegalStateException("Login Page not loaded correctly");
+		if (!isPageLoaded()) {
+			throw new IllegalStateException("Desktops Page not loaded correctly");
 		}
+
 	}
 
 	// abstract methods implementations
-
 	@Override
 	public boolean isPageLoaded() {
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(Page_Elements.PAGE_HEADER_TEXT.getLocator()));
 			return isDisplayed(Page_Elements.PAGE_HEADER_TEXT.getLocator());
-			
+
 		} catch (Exception e) {
 			return false;
 		}
+
 	}
 
 	@Override
@@ -36,24 +39,16 @@ public class LoginPage extends BasePage {
 
 	// action methods
 
-	public void setEmail(String email) {
-		type(Page_Elements.EMAIL_ADDRESS.getLocator(), email);
+	public List<WebElement> getAllElements() {
+		List<WebElement> elements = driver.findElements(Page_Elements.PRODUCTS_LIST.getLocator());
+		return elements;
 	}
 
-	public void setPassword(String password) {
-		type(Page_Elements.PASSWORD.getLocator(), password);
-	}
-
-	public void clickLogin() {
-		click(Page_Elements.LOGIN_BUTTON.getLocator());
-	}
-
-	// locators for Login Page
+	// locators for DesktopsPage
 
 	private enum Page_Elements {
-		PAGE_HEADER_TEXT(By.xpath("//h2[contains(text(),'Returning Customer')]")),
-		EMAIL_ADDRESS(By.xpath("//input[@id='input-email']")), PASSWORD(By.xpath("//input[@id='input-password']")),
-		LOGIN_BUTTON(By.xpath("//input[@value='Login']"));
+		PAGE_HEADER_TEXT(By.xpath("//h2[contains(text(),'Desktops')]")),
+		PRODUCTS_LIST(By.xpath("//div[@id='content']//div[4]//div//img"));
 
 		private final By locator;
 

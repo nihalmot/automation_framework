@@ -4,8 +4,8 @@
 
 	<groups>
 		<run>
-			<include name="Master"/>
-			<include name="Regression"/>
+			<!--<include name="Master"/>-->
+			<!--<include name="Regression"/>-->
 		
 		</run>
 	</groups>
@@ -21,8 +21,10 @@
   	<parameter name="browser" value="chrome"/>
   
     <classes>
-      <class name="testcases.TC001_AccountRegistrationTest"/>
+      <!--<class name="testcases.TC001_AccountRegistrationTest"/>-->
       <!--<class name="testcases.TC002_LoginTest"></class>-->
+      <!--<class name="testcases.TotalDesktopProductValidation"></class>-->
+      <class name="testcases.AppleCinemaProductValidation"></class>
     </classes>
     
   </test> <!-- Test -->
