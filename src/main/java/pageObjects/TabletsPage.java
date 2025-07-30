@@ -45,7 +45,7 @@ public class TabletsPage extends BasePage {
 	}
 
 	public void clickAddToCart() {
-		click(Page_Elements.ADD_TO_CART_BUTTON.getLocator());
+		waitForElementVisiblity(Page_Elements.ADD_TO_CART_BUTTON.getLocator(), 5).click();
 	}
 
 	public void clickCartOption() {
