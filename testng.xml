@@ -6,26 +6,29 @@
 		<run>
 			<!--<include name="Master"/>-->
 			<!--<include name="Regression"/>-->
-		
+
 		</run>
 	</groups>
 
 
 	<listeners>
-		<listener class-name="utilities.ExtentReportManager"/>
+		<listener class-name="utilities.ExtentReportManager" />
 	</listeners>
 
-  <test thread-count="5" name="Test">
-  
-  	<parameter name="os" value="Windows"/>
-  	<parameter name="browser" value="chrome"/>
-  
-    <classes>
-      <!--<class name="testcases.TC001_AccountRegistrationTest"/>-->
-      <!--<class name="testcases.TC002_LoginTest"></class>-->
-      <!--<class name="testcases.TotalDesktopProductValidation"></class>-->
-      <class name="testcases.AppleCinemaProductValidation"></class>
-    </classes>
-    
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test thread-count="5" name="Test">
+
+		<parameter name="os" value="Windows" />
+		<parameter name="browser" value="chrome" />
+
+		<classes>
+			<!--<class name="testcases.TC001_AccountRegistrationTest"/>-->
+			<!--<class name="testcases.TC002_LoginTest"></class>-->
+			<!--<class name="testcases.TotalDesktopProductValidation"></class>-->
+			<!--<class name="testcases.AppleCinemaProductValidation"></class>-->
+			<class name="testcases.TabletAddToCartValidation"></class>
+		</classes>
+
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

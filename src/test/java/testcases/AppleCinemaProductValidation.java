@@ -52,7 +52,6 @@ public class AppleCinemaProductValidation extends BaseTest {
 		applePage.selectInnerDate("20", "May", "2016");
 		applePage.selectInnerTime(10, 30);
 		applePage.typeIntoQuantity("10");
-		
 
 	}
 }

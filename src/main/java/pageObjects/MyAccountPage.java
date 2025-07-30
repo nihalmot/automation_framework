@@ -48,6 +48,10 @@ public class MyAccountPage extends BasePage {
 		
 	}
 	
+	public void clickTabletsOption() {
+		click(Page_Elements.TABLETS_OPTION.getLocator());
+	}
+	
 	// locators for MyAccountPage
 
 	private enum Page_Elements {
@@ -55,7 +59,8 @@ public class MyAccountPage extends BasePage {
 		PAGE_HEADING(By.xpath("//h2[normalize-space()='My Account']")),
 		LOGOUT_LINK(By.xpath("//a[@class='list-group-item'][normalize-space()='Logout']")),
 		DESKTOPS_OPTION(By.xpath("(//a[contains(text(),'Desktops')])[1]")),
-		ALL_DESKTOPS_OPTION(By.xpath("//a[contains(text(),'Show AllDesktops')]"));
+		ALL_DESKTOPS_OPTION(By.xpath("//a[contains(text(),'Show AllDesktops')]")),
+		TABLETS_OPTION(By.xpath("//a[contains(text(),'Tablets')]"));
 
 		private final By locator;
 
